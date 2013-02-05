@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Sorts Mill Goudy', sans-serif;
     font-size: 16px;
@@ -15,6 +16,7 @@ header {
 
 #title {
     padding: 25px 0;
+    padding-left: 25px;
 }
 
 #title h1 {
@@ -33,9 +35,11 @@ header {
     padding: 0;
 }
 
+
 nav {
     background: #98495B;
-    padding: 10 0;
+    padding: 0;
+    margin: 0;
     border-bottom: solid 1px #495C98;
     border-top: solid 1px #96A38F;
 }
@@ -44,18 +48,22 @@ nav ul {
     position: relative;
     list-style: none;
     padding: 0;
-    padding-left: 100;
+    margin: 0;
+    padding-left: 100px;
 }
 
 nav ul li {
     float: left;
+    padding: 0;
     margin: 0;
 }
 
 nav ul li a {
+    padding: 0;
+    margin: 0;
     text-decoration: none;
     display: block;
-    font-size: 20;
+    font-size: 20px;
     padding: 8px 16px;
     color: #E3E3E3;
 }
@@ -78,14 +86,15 @@ nav ul li a:hover, nav ul li:hover > a {
 
 .project-entry p {
     text-align: justify;
-    margin: 10 10;
+    margin: 10px;
+    padding: 10px;
 }
 
 .project-entry .tags {
     font-family: monospace, monospace;
     font-size: 1em;
     text-align: center;
-    margin-bottom: 10;
+    margin-bottom: 10px;
 }
 
 .project-entry img {
@@ -98,7 +107,7 @@ nav ul li a:hover, nav ul li:hover > a {
 .section {
     background: #E6E6E6;
     margin-bottom: 24px;
-    padding: 10 0;
+    padding: 10px 0;
     border-top: solid 4px #495C98;
     border-bottom: solid 4px #98495B;
 }
@@ -110,20 +119,14 @@ nav ul li a:hover, nav ul li:hover > a {
     border-right: solid 4px #98495B;
 }
 
-article {
-    background: #E6E6E6;
-    margin-bottom: 24px;
-    padding: 10 10;
-    border-top: solid 4px #495C98;
-    border-bottom: solid 4px #98495B;
-}
-
-article header {
-    background: #E6E6E6;
-}
-
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+#disqus_thread {
+
+    background-color: white;
 }
