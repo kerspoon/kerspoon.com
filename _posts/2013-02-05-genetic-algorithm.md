@@ -1,11 +1,9 @@
 ---
 layout: project
-categories: [project]
-description: A Lisp like programming language (called LiPy2) written to demonstrate certain programming techniques. It has prototype objects like Javascript and Lua as well as basic macros. It is written in Python using Emacs.
+categories: [projects]
+description: A graphical multithreaded control system optimisation tool that uses genetic algorithms to tune the system parameters. The genetical algorithm has the novel modification of using symbolic rather than binary genes.
 image: ga.png
-tags: [programming, lisp, python]
+tags: [programming, multithreaded]
 ---
 
-# Genetic Algo #
-
-When you use UTF-8 encoding for your file, make sure that no BOM header chars exist in your file or everything will blow up! (Alternatively, you can run `chcp 65001` to set your codepage to UTF-8. Note that there are issues with doing this in a batch file in Vista and earlier.)
+A graphical multithreaded control system optimisation tool that uses genetic algorithms to tune the system parameters. The genetical algorithm has the novel modification of using symbolic rather than binary genes.
