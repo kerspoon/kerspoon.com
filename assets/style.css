@@ -97,6 +97,7 @@ nav ul li a:hover, nav ul li:hover > a {
 }
 
 .project-entry img {
+    max-width: 242px;
     border-bottom: solid 4px #495C98;
     border-left: solid 4px #98495B;
     border-top: solid 4px #495C98;
