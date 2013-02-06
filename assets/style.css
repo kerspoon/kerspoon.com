@@ -15,26 +15,8 @@ header {
 }
 
 #title {
-    padding: 25px 0;
-    padding-left: 25px;
+    padding: 20px;
 }
-
-#title h1 {
-    font-size: 54px;
-    color: #96A38F;
-    font-family: 'Monoton', serif;
-    margin: 0;
-    padding: 0;
-}
-
-#title h2 {
-    font-size: 24px;
-    color: #96A38F;
-    font-family: 'Monoton', serif;
-    margin: 0;
-    padding: 0;
-}
-
 
 nav {
     background: #98495B;
@@ -58,7 +40,6 @@ nav ul li {
 }
 
 nav ul li a {
-    padding: 0;
     margin: 0;
     text-decoration: none;
     display: block;
