@@ -2,7 +2,7 @@
 body {
     font-family: 'Sorts Mill Goudy', sans-serif;
     font-size: 16px;
-    background: #96A38F;
+    background-color: #96A38F;
     padding: 0;
     margin: 0;
 }
@@ -11,7 +11,7 @@ header {
     padding: 0;
     margin: 0;
     margin-bottom: 25px;
-    background: #495C98;
+    background-color: #495C98;
 }
 
 #title {
@@ -24,7 +24,7 @@ header {
 }
 
 nav {
-    background: #98495B;
+    background-color: #98495B;
     padding: 0;
     margin: 0;
     border-bottom: solid 1px #495C98;
@@ -58,7 +58,7 @@ nav ul li a:hover, nav ul li:hover > a {
 }
 
 .project-entry {
-    background: #E6E6E6;
+    background-color: #E6E6E6;
     margin-bottom: 24px;
     border-top: solid 4px #495C98;
     border-bottom: solid 4px #98495B;
@@ -91,7 +91,7 @@ nav ul li a:hover, nav ul li:hover > a {
 }
 
 .section {
-    background: #E6E6E6;
+    background-color: #E6E6E6;
     margin-bottom: 24px;
     border-top: solid 4px #495C98;
     border-bottom: solid 4px #98495B;
