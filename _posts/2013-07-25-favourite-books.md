@@ -26,4 +26,5 @@ categories: [blog]
 - [The Red Queen: Sex and the Evolution of Human Nature by Matt Ridley](http://www.mattridley.co.uk/publications/the-red-queen-sex-and-the-evolution-of-human-nature.aspx)
 - [The Visual Display of Quantitative Information by Edward R. Tufte](http://www.edwardtufte.com/tufte/books_vdqi)
 - [Influence: The Psychology of Persuasion by Robert Cialdini](http://www.influenceatwork.com/robert-cialdini-phd/books-and-publications/)
+- [The Skeptical Buddist by Garry Thomson](http://www.amazon.com/Skeptical-Buddhist-Garry-Thomson/dp/9748363473)
 
