@@ -1,6 +1,7 @@
 ---
 layout: post
 categories: [blog]
+description: Basic details about the site and it's migration to Jekyll.
 ---
 
 I'm have now migrated my entire site to [Jekyll](http://jekyllrb.com/) and [disqus](http://disqus.com/). It took less than half a day. So far I'm impressed.
