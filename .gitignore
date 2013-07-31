@@ -2,3 +2,5 @@
 _site
 build
 serve
+
+Gemfile.lock
