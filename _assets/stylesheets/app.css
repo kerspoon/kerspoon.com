@@ -1,7 +1,9 @@
+//= require normalize
+//= require unsemantic-grid-responsive
 
 body {
     font-family: 'Sorts Mill Goudy', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: #96A38F;
     padding: 0;
     margin: 0;
@@ -10,12 +12,12 @@ body {
 header {
     padding: 0;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     background-color: #495C98;
 }
 
 #title {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 #title img {
@@ -48,8 +50,8 @@ nav ul li a {
     margin: 0;
     text-decoration: none;
     display: block;
-    font-size: 20px;
-    padding: 8px 16px;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
     color: #E3E3E3;
 }
 
@@ -59,48 +61,48 @@ nav ul li a:hover, nav ul li:hover > a {
 
 .project-entry {
     background-color: #E6E6E6;
-    margin-bottom: 24px;
-    border-top: solid 4px #495C98;
-    border-bottom: solid 4px #98495B;
+    margin-bottom: 1.5rem;
+    border-top: solid 0.25rem #495C98;
+    border-bottom: solid 0.25rem #98495B;
 }
 
 .project-entry h3 {
     text-align: center;
-    margin: 12px 0;
+    margin: 0.75rem 0;
 }
 
 .project-entry p {
     text-align: justify;
-    margin: 10px;
-    padding: 10px;
+    margin: 0.625rem;
+    padding: 0.625rem;
 }
 
 .project-entry .tags {
     font-family: monospace, monospace;
     font-size: 1em;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .project-entry img {
     max-width: 242px;
-    border-bottom: solid 4px #495C98;
-    border-left: solid 4px #98495B;
-    border-top: solid 4px #495C98;
-    border-right: solid 4px #98495B;
+    border-bottom: solid 0.25rem #495C98;
+    border-left: solid 0.25rem #98495B;
+    border-top: solid 0.25rem #495C98;
+    border-right: solid 0.25rem #98495B;
 }
 
 .section {
     background-color: #E6E6E6;
-    margin-bottom: 24px;
-    border-top: solid 4px #495C98;
-    border-bottom: solid 4px #98495B;
+    margin-bottom: 1.5rem;
+    border-top: solid 0.25rem #495C98;
+    border-bottom: solid 0.25rem #98495B;
 }
 
 .section img {
-    margin-top: 12px;
-    border-top: solid 4px #495C98;
-    border-bottom: solid 4px #98495B;
+    margin-top: 0.75rem;
+    border-top: solid 0.25rem #495C98;
+    border-bottom: solid 0.25rem #98495B;
 }
 
 .center {
