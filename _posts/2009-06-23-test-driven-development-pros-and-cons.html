@@ -1,22 +1,9 @@
 ---
-title: "Test Driven Development (pros and cons)"
-layout: "post"
-permalink: "\\2009\06\test-driven-development-pros-and-cons.html"
-uuid: "2597836909581550023"
-guid: "tag:blogger.com,1999:blog-5620972990149237873.post-2597836909581550023"
-date: "2009-06-23 10:10:00"
-updated: "2009-11-04 15:35:11"
-description: 
-blogger:
-    siteid: "5620972990149237873"
-    postid: "2597836909581550023"
-    comments: "0"
-categories: [programming]
-author: 
-    name: "James Brooks"
-    url: "https://plus.google.com/102573050958369185190?rel=author"
-    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+layout: post
+categories: [blog]
+tags: [programming]
 ---
+
 
 <div class="css-full-post-content js-full-post-content">
 I am a fan of TDD (Test Driven Development), for those who don't know TDD here is the places to read about it:<br /><br /><a href="http://www.amazon.co.uk/Test-Driven-Development-Addison-Wesley-Signature/dp/0321146530/">Test Driven Development by Kent Beck</a><br /><br /><a href="http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd">The Three Rules Of TDD by UncleBob</a><br /><ol><li>You are not allowed to write any production code unless it is to make a failing unit test pass.</li><li>You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.</li><li>You are not allowed to write any more production code than is sufficient to pass the one failing unit test.<br /></li></ol><a href="http://www.nilkanth.com/2007/06/08/three-monkeys-of-test-driven-development/">Three Monkeys of Test-Driven Development by Ashutosh Nilkanth</a><br /><br /><a href="http://wellington.pm.org/archive/200606/tdd/images/tdd_cycle.jpg"><img style="width: 250px; height: 300px;" src="http://wellington.pm.org/archive/200606/tdd/images/tdd_cycle.jpg" alt="" border="0" /></a><br /><br />You basically make sure everything works before doing anything else; and you only do one thing at a time. It has the great advantage that you can change whatever you want in your code and you can be sure it is as good as before. This allows you to aggressively refactor. Being able to refactor without fear of breaking something should leave you code easier to maintain and easier to add new features. This will hopefully overcome the time it has taken to write all those tests in the first place.<br /><br />A few things make TDD more difficult:<br /><ul><li>Randomness (Non-Deterministic Methods)<br /></li><li>User Interfaces</li><li>External Code (including Databases)</li></ul>It is for this reason that I find it difficult to use TDD for all my coding. Now those who support it say that you can mock up facade classes for the external code including random number generation meaning you can test only the bits you want.<br /><br />My other problem it it seems to break my flow of thinking. I want to type out a load of different ways of doing things and see which one I like better.<br /><br /><hr /><br />I think TDD has it's place but there is a need to do another kind of programming. <span style="font-weight: bold;">Exploratory programming</span>; one where you do not know what you want to end up with. You just chuck out a load of code and see how it runs. This is great if you have a nice fast development cycle, i.e. interpreted high level language. I would say that it get exponentially more complicated to do exploratory programming as the total number of lines of code increases. This gives a natural limit to the kind of things that can be accomplished with this technique. I believe it is best suited for tracers and prototypes (see The Pragmatic Programmer). In this case you quickly see the shape of a small part of your program and begin to see what things (modules, classes) you need in the full version. Once you have got a section of code working you can write it properly (with TDD) meaning you live by the rules of TDD and throw one away (Mythical Man Month).

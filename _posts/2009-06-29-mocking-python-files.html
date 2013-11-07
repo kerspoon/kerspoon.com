@@ -1,22 +1,9 @@
 ---
-title: "Mocking Python Files"
-layout: "post"
-permalink: "\\2009\06\mocking-python-files.html"
-uuid: "5122299333478750935"
-guid: "tag:blogger.com,1999:blog-5620972990149237873.post-5122299333478750935"
-date: "2009-06-29 09:52:00"
-updated: "2009-06-29 10:10:35"
-description: 
-blogger:
-    siteid: "5620972990149237873"
-    postid: "5122299333478750935"
-    comments: "0"
-categories: [python, programming]
-author: 
-    name: "James Brooks"
-    url: "https://plus.google.com/102573050958369185190?rel=author"
-    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+layout: post
+categories: [blog]
+tags: [python, programming]
 ---
+
 
 <div class="css-full-post-content js-full-post-content">
 Just a quick note on testing python; I needed to test a method the reads in from a file. To do that I could either created a <a href="http://docs.python.org/library/tempfile.html">temp file</a> or use <a href="http://docs.python.org/library/stringio.html">stringio</a>. Stringio is easier and quicker so I used that, here's how:<br /><br /><pre class="prettyprint"><br />def mockfile(text):<br />    return StringIO.StringIO(text)<br /><br />class Tester1(unittest.TestCase):<br />    def setUp(self):<br />        self.filehandle = mockfile("""<br />        gen , G1  , 101 , 450  ,  50  ,   U20""")<br />        self.components = read(self.filehandle)<br /><br />    def tearDown(self):<br />        self.filehandle.close()<br />        self.filehandle = None<br />        self.components = None<br /><br />    def test_name(self):<br />        self.assertEqual(set(self.components.keys()), <br />                         set("G1"))<br /><br /><br />class Tester2(unittest.TestCase):<br />    def test_a(self):<br />        components = read(mockfile(""))<br />        self.assertEqual(len(components),0)<br /></pre><br /><br />Hopefully I this is the first in a series of posts on practical <a href="en.wikipedia.org/wiki/Test-driven_development">TDD</a>. Watch this space
