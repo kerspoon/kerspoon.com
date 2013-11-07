@@ -1,0 +1,22 @@
+---
+title: "emacs rocks"
+layout: "post"
+permalink: "\\2010\02\emacs-rocks.html"
+uuid: "9157553364490482460"
+guid: "tag:blogger.com,1999:blog-5620972990149237873.post-9157553364490482460"
+date: "2010-02-02 14:04:00"
+updated: "2010-02-02 14:04:41"
+description: 
+blogger:
+    siteid: "5620972990149237873"
+    postid: "9157553364490482460"
+categories: [programming, emacs]
+author: 
+    name: "James Brooks"
+    url: "https://plus.google.com/102573050958369185190?rel=author"
+    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+I had a boring text editing task. I'm using a text file that refers to components by a number and after writing it I realised that I need those component numbers to be incrementing. <br /><br />I had:<br /><br /><pre>Bus.con = [<br /> 101   138  1  0  2  1;<br /> 102   138  1  0  2  1;<br />...<br /> 124   138  1  0  2  1;<br /> 201   138  1  0  2  1;<br /> 202   138  1  0  2  1;<br />...<br />];<br /><br />Shunt.con = [<br /> 106  100  138  60  0  -1  1;<br /> 206  100  138  60  0  -1  1;<br /> 306  100  138  60  0  -1  1;<br />];</pre><br />I wanted:<br /><br /><pre>Bus.con = [<br />  1  138  1  0  2  1;<br />  2  138  1  0  2  1;<br />...<br /> 24   138  1  0  2  1;<br /> 25   138  1  0  2  1;<br /> 26   138  1  0  2  1;<br />...<br />];<br /><br />Shunt.con = [<br />  6  100  138  60  0  -1  1;<br /> 30  100  138  60  0  -1  1;<br /> 54  100  138  60  0  -1  1;<br />];</pre><br />One problem is that the component number might be the same as a parameter (which I don't want to change). Two tools here:<br /><br /><ol><li><a href="http://www.emacswiki.org/emacs/ReBuilder">re-builder</a>&nbsp;-&nbsp;interactively&nbsp;build a regular expression.&nbsp;</li><li><a href="http://www.emacswiki.org/emacs/ReplaceRegexp">(query)-replace-regex</a>p - replace a regexp with another&nbsp;</li><li><a href="http://steve-yegge.blogspot.com/2006/06/shiny-and-new-emacs-22.html">elisp in regexps</a>&nbsp;- do anything with a regexp</li></ol><div>This led to the following three replacements:</div>replace " 1\([0-2][0-9]\) " with " \1 "<div>replace " 2\([0-2][0-9]\) " with " \,(+ 24 string-to-int \1)) "</div>replace " 3\([0-2][0-9]\) " with " \,(+ 48 string-to-int \1)) "<br /><div>by doing it as a query I made sure I was only replacing the correct stuff.&nbsp;</div><div><br /></div><div>I even had time to write this blog post.&nbsp;</div><div><br /></div>
+</div>

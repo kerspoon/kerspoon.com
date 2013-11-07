@@ -1,0 +1,23 @@
+---
+title: "Combining Python Dictionaries"
+layout: "post"
+permalink: "\\2009\06\combining-python-dictionaries.html"
+uuid: "8534883957077881679"
+guid: "tag:blogger.com,1999:blog-5620972990149237873.post-8534883957077881679"
+date: "2009-06-05 14:56:00"
+updated: "2009-06-05 14:59:20"
+description: 
+blogger:
+    siteid: "5620972990149237873"
+    postid: "8534883957077881679"
+    comments: "0"
+categories: [python, programming]
+author: 
+    name: "James Brooks"
+    url: "https://plus.google.com/102573050958369185190?rel=author"
+    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+I had a small task where I had to take two existing dict and combine them by adding together the values of any elements that already exist. Here's how I did it.<br /><br /><pre class=prettyprint><br /><br />def dict_combine(dict1, dict2, combiner):<br />      """takes two dictionaries and combines them<br />      such that the value is the result of:<br />      result[a]  = combiner(dict1[a],dict2[a])"""<br />      result = {}<br />      dict1_keys = set(dict1.keys())<br />      dict2_keys = set(dict2.keys())<br /><br />      # keys uniuqe to dict1 are included unchanged<br />      for x in dict1_keys - dict2_keys:<br />            result[x] = dict1[x]<br /><br />      # keys uniuqe to dict2 are included unchanged<br />      for x in dict2_keys - dict1_keys:<br />            result[x] = dict2[x]<br /><br />      # keys in both dictionaries get combined then included<br />      for x in dict1_keys & dict2_keys:<br />            result[x] = combiner(dict1[x],dict2[x])<br /><br />      return result<br /><br />def test_dict_combine():<br />      dict1 = dict(a=1, b=2, c=3)<br />      def adder(a,b):<br />            return a + b <br />      assert dict_combine(dict1,dict1,adder) == dict(a=2, b=4, c=6)<br />test_dict_combine()<br /></pre>
+</div>

@@ -1,0 +1,23 @@
+---
+title: "Genetic Algorithms and Traveling Salesman"
+layout: "post"
+permalink: "\\2009\06\genetic-algorithms-and-traveling.html"
+uuid: "4102031408320883955"
+guid: "tag:blogger.com,1999:blog-5620972990149237873.post-4102031408320883955"
+date: "2009-06-10 10:11:00"
+updated: "2009-06-10 10:43:22"
+description: 
+blogger:
+    siteid: "5620972990149237873"
+    postid: "4102031408320883955"
+    comments: "0"
+categories: [genetics, Genetic Algorithms]
+author: 
+    name: "James Brooks"
+    url: "https://plus.google.com/102573050958369185190?rel=author"
+    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+My friend is doing some work with Genetic Algorithms. He's trying to optimize a kind of traveling salesman problem. Here is the problem:<br /><br />You have N sources and M destinations, it takes a specific cost to transport goods between the two. Each has a max and min capacity and you have to make sure all of the source gets to a destination in the least possible cost. (in reality there is a lot more to it but that's enough for me to explain what I want to)<br /><br />He has coded it as a list of integers. The index into that list is the source and the value is the destination.<br /><pre>---------------------------------------<br />Source      | 1 | 2 | 3 | 4 | ... | N |<br />---------------------------------------<br />Destination | 3 | 2 | 9 | 9 | ... | 6 |<br />---------------------------------------</pre>From the about you can see that all goods from both source 3 and 4 go to destination 9.<br /><br />It wasn't working as well as the client wanted so we worked through some modifications.<br /><br />1. Change the crossover method. He was using single point crossover, I thought this would cause sections of solutions to remain fixed for too long. i.e. you would be limited to having the same beginning sections of genome as one of the randomly selected initial individuals. I suggested occasionally he selects a random genes (here being one integer in the list) from the parents. This way they still get about 50% from each parent but which ones that get are random (rather than from the beginning or from the end).<br /><br />2. Change the mutation method. He was mutating by changing a random source to a random number. As he pointed out, this is likely to cause infeasible solutions. Instead we decided that swapping two sources might be a better method. I think this will help particularly in later epochs (generations). Note that you still need the old mutation to bring back removed destinations.<br /><br />I did also suggest hill climbing the best solutions at the end of the GA. But as there are no continuous variables I'm don't think this would work.<br /><br />It might also have been an idea to group good partial solutions which his current encoding method doesn't exploit to it's potential. For example, it might be that all good solutions have the same source/destinations links as each other for a sources 2,6,17,29. It would be nice if the GA could allow these to be close together on the genome so that they stay as a unit. We could partition the GA by selecting chunks of sources and solve each separately, then use the best 10 from each partition to make a new combined solution with improved starting points.<br /><br />One interesting part that he has already used was to penalize the solutions that don't transport all the goods or transport too much. He does this by an exponential so that solutions that heavily break the rules ave very heavily punished. I did suggest that it might be a good idea to change the punishment factor with the number of generations such that you allow the rules to be bent at the start but not at the end.<br /><br />We shall have to see how it works.
+</div>

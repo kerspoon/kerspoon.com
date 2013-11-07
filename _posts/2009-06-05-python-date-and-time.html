@@ -1,0 +1,23 @@
+---
+title: "Python Date and Time"
+layout: "post"
+permalink: "\\2009\06\python-date-and-time.html"
+uuid: "8816984896227302304"
+guid: "tag:blogger.com,1999:blog-5620972990149237873.post-8816984896227302304"
+date: "2009-06-05 15:28:00"
+updated: "2009-06-05 15:35:59"
+description: 
+blogger:
+    siteid: "5620972990149237873"
+    postid: "8816984896227302304"
+    comments: "0"
+categories: [python, programming]
+author: 
+    name: "James Brooks"
+    url: "https://plus.google.com/102573050958369185190?rel=author"
+    image: "//lh6.googleusercontent.com/-MTfXaKDXOnE/AAAAAAAAAAI/AAAAAAAA8rc/fCkihUfrY_w/s512-c/photo.jpg"
+---
+
+<div class="css-full-post-content js-full-post-content">
+Same project, different problem. This time the problem is dates and times. Specifically converting between them. These two small functions do just that. <br /><br /><pre class="prettyprint"># parse_date :: Date -> String<br /># e.g. parse_date("2001-12-31")<br />def parse_date(date):<br /> return datetime.date(*strptime(date, "%Y-%m-%d")[0:3])<br /><br /># str_date :: String -> Date<br />def str_date(date):<br /> return date.strftime("%Y-%m-%d")</pre><br /><ul><li><a href="http://docs.python.org/3.0/library/datetime.html#strftime-behavior">http://docs.python.org/3.0/library/datetime.html#strftime-behavior</a></li><li><a href="http://docs.python.org/library/time.html">http://docs.python.org/library/time.html</a><br /></li><li><a href="http://pleac.sourceforge.net/pleac_python/datesandtimes.html">http://pleac.sourceforge.net/pleac_python/datesandtimes.html</a></li><li><a href="http://www.google.co.uk/search?hl=en&amp;q=site%3Adocs.python.org+strptime&amp;btnG=Search&amp;meta=">google search</a><br /></li><br /></ul>P.S. Pleac is a wonderful site, it aims to have a load of common code for a variety of languages, good to get practical tips as well as learn a new language.
+</div>
