@@ -1,28 +1,63 @@
 @media all {
     html { font-size: 20px }
 }
-@media all and (max-width:570px) {
+@media all and (max-width:690px) {
     html { font-size: 18px }
 }
-@media all and (max-width:520px) {
+@media all and (max-width:640px) {
+    html { font-size: 17px }
+}
+@media all and (max-width:600px) {
     html { font-size: 16px }
 }
-@media all and (max-width:440px) {
+@media all and (max-width:570px) {
+    html { font-size: 15px }
+}
+@media all and (max-width:530px) {
     html { font-size: 14px }
 }
-@media all and (max-width:410px) {
-    html { font-size: 12px }
+
+h1, h2, h3, h4 {
+  font-family: 'PT Sans', sans-serif;
+  color: #383838;
+  border-top: solid 1px #383838;
+  padding: 1rem 0 0 0;
+  margin: 2rem 0;
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.33333rem;
+}
+
+h2 {
+  font-size: 1.16667rem;
+}
+
+h3, h3, h4, h5 {
+  font-size: 1rem;
 }
 
 body {
-  font-family: serif;
+  font-family: 'Arvo', serif;
   padding: 0;
   margin-left:auto;
   margin-right:auto;
   width:100%;
-  max-width:600px;
+  max-width:700px;
   min-height: 100%;
+  line-height: 145%;
   color: #444444;
+  background-color: #F2F4F8;
+}
+
+p {
+  margin-top: 1rem;
+}
+
+section {
+  clear: both;
 }
 
 .main {
@@ -30,23 +65,6 @@ body {
   padding: 0;
 }
 
-h1 {
-  font-size: 1.33333rem;
-  color: #383838;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.16667rem;
-  color: #383838;
-  padding-top: 1rem;
-  border-top: solid 1px #383838;
-  text-align: center;
-}
-
-section {
-  clear: both;
-}
 
 .half {
   float: left;
