@@ -1,5 +1,11 @@
-//= require normalize
-//= require unsemantic-grid-responsive
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "normalize";
+@import "unsemantic-grid-responsive";
 
 body {
     font-family: 'Sorts Mill Goudy', sans-serif;

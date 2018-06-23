@@ -4,8 +4,3 @@ url: http://kerspoon.com
 title: kerspoon
 exclude:   ["README.md", "Gemfile", "Gemfile.lock"]
 permalink: /:categories/:year/:title/
-
-assets:
-  compress:
-    css:  sass
-    js:   uglifier
